@@ -1,0 +1,70 @@
+.banner{
+    position: relative;
+}
+
+.banner-img img{
+    display: block;
+    border-radius: 30px ;
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 30px ;
+}
+.banner-content{
+    left: 15%;
+    border-radius: 30px ;
+    height: 100px;
+    width: 70%;
+    justify-content: center;
+    text-align: center;
+    z-index: 999 !important;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 35px;
+}
+.banner-content h4{
+ font-size: 20px;
+ color: white;
+ opacity: 1 !important;
+ z-index: 9999;
+ margin-top: 20px;
+}
+.banner-content h6{
+    font-size: 15px;
+    color: white;
+    opacity: 1 !important;
+   }
+   
+.icon-box{
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    padding: 0 10px;
+
+}
+.boder-content{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #742f1c;
+    position: relative;
+
+}
+.boder-content img{
+    background-color: white;
+    width: 20%;
+    border: 1px solid #742f1c;
+    position: absolute;
+    top: -37px;
+    left: 135px;
+}.boder-content p{
+    padding: 0 10px;
+}
+.boder-content h3{
+    top: 20px;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 21px;
+}
+.col-inner{
+    margin-top: 20px;
+}
