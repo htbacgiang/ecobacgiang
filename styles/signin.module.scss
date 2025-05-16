@@ -1,0 +1,128 @@
+.login {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 790px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    &__container {
+      padding: 3rem;
+      &:last-of-type {
+        margin-top: 3rem;
+        @media (max-width: 790px) {
+          margin-top: 0;
+        }
+      }
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 300px;
+      .back__svg {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #66666657;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+  
+        &:hover {
+          border-color: #2f82ff;
+          svg {
+            fill:#2f82ff;
+          }
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: #222;
+        }
+      }
+      span {
+        font-weight: 600;
+        font-size: 14px;
+        //padding-left: 10px;
+        a {
+          color: #2f82ff;
+          cursor: pointer;
+          border-bottom: 1px solid #2f82ff;
+          padding-bottom: 5px;
+        }
+      }
+    }
+    &__form {
+      margin-top: 1rem;
+      h1 {
+        font-size: 50px;
+        margin: 0;
+      }
+      p {
+        color: #96979b;
+      }
+      form {
+        margin-top: 2rem;
+      }
+      .forgot {
+        color: #666;
+        padding-top: 1rem;
+        font-size: 14px;
+        width: fit-content;
+        height: 40px;
+        &:hover {
+          color: #2f82ff;
+          border-bottom: 1px solid #2f82ff;
+        }
+      }
+    }
+    &__socials {
+      display: flex;
+      flex-direction: column; /* Sắp xếp các thành phần theo chiều dọc */
+      align-items: center; /* Căn giữa cả nội dung theo chiều ngang */
+      margin-top: 1rem; /* Khoảng cách phía trên */
+      .or {
+        position: relative;
+        color: #666;
+        font-size: small;
+        &:before,
+        &:after {
+          content: "";
+          height: 1px;
+          background: #66666648;
+          position: absolute;
+          top: 50%;
+        }
+        &:before {
+          left: 250px;
+        }
+        &:after {
+          left: -10px;
+        }
+      }
+      &_wrap {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        img {
+          width: 36px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .social__btn {
+    border-radius: 50px;
+    display: flex;
+    padding-left: 5%;
+    gap: 10px;
+    background: transparent;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center; /* Căn giữa hình ảnh trong nút */
+  }
