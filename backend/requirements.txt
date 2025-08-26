@@ -1,0 +1,132 @@
+# Eco Bắc Giang Chatbot - Complete Requirements
+# Hệ thống AI chatbot hoàn chỉnh với conversation management và auto-training
+# Cài đặt: pip install -r requirements.txt
+
+# ============================================================================
+# CORE FRAMEWORK & WEB
+# ============================================================================
+flask==2.3.3
+flask-cors==4.0.0
+python-dotenv==1.0.0
+gunicorn==21.2.0
+
+# ============================================================================
+# AUTHENTICATION & SECURITY
+# ============================================================================
+PyJWT==2.8.0
+cryptography==41.0.4
+bcrypt==4.0.1
+
+# ============================================================================
+# DATABASE & STORAGE
+# ============================================================================
+pymongo==4.5.0
+requests==2.31.0
+
+# ============================================================================
+# MACHINE LEARNING & AI
+# ============================================================================
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.3.0
+
+# Deep Learning - TensorFlow (Optional)
+# tensorflow==2.13.0
+# keras==2.13.1
+
+# Deep Learning - PyTorch (Optional)
+# torch==2.0.1
+# torchvision==0.15.2
+# torchaudio==2.0.2
+
+# Natural Language Processing
+transformers==4.33.2
+sentence-transformers==2.2.2
+tokenizers==0.13.3
+
+# Text Processing
+nltk==3.8.1
+
+# Data Processing & Visualization
+scipy==1.11.2
+matplotlib==3.7.2
+seaborn==0.12.2
+
+# ============================================================================
+# CONVERSATION MANAGEMENT & AUTO-TRAINING
+# ============================================================================
+schedule==1.2.0
+APScheduler==3.10.4
+
+# ============================================================================
+# UTILITIES & TOOLS
+# ============================================================================
+tqdm==4.66.1
+joblib==1.3.2
+python-dateutil==2.8.2
+urllib3==2.0.4
+
+# JSON & Configuration
+jsonschema==4.19.0
+pyyaml==6.0.1
+
+# Logging & Monitoring
+colorlog==6.7.0
+memory-profiler==0.60.0
+psutil==5.9.5
+
+# Model Serialization
+dill==0.3.7
+pickle5==0.0.11
+
+# Progress & UI
+alive-progress==3.1.4
+
+# Type Hints
+typing-extensions==4.7.1
+
+# Math & Science
+sympy==1.12
+
+# ============================================================================
+# DEVELOPMENT & TESTING
+# ============================================================================
+pytest==7.4.0
+pytest-mock==3.11.1
+
+# ============================================================================
+# OPTIONAL - ADVANCED FEATURES (Uncomment if needed)
+# ============================================================================
+# faiss-cpu==1.7.4          # Vector similarity search
+# redis==4.6.0              # Caching
+# celery==5.3.1             # Distributed tasks
+# spacy==3.6.1              # Advanced NLP
+# underthesea==6.7.0        # Vietnamese NLP
+# openai==1.3.0             # OpenAI API integration
+
+# ============================================================================
+# BUILT-IN MODULES (No installation needed)
+# ============================================================================
+# Built-in modules that don't need pip install:
+# - secrets, difflib, gc, weakref, asyncio, threading, multiprocessing
+# - pathlib, glob, shutil, traceback, warnings, os, sys, time, datetime
+# - random, collections, itertools, functools, re, string, math, statistics
+# - hashlib, hmac, pickle, json, gzip, zipfile, socket, ssl
+
+# ============================================================================
+# INSTALLATION NOTES
+# ============================================================================
+# 1. Basic installation: pip install -r requirements.txt
+# 2. For GPU support: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# 3. For TensorFlow: pip install tensorflow
+# 4. For development: pip install -r requirements.txt[dev]
+# 5. For production: pip install -r requirements.txt --no-dev
+
+# ============================================================================
+# SYSTEM REQUIREMENTS
+# ============================================================================
+# - Python 3.8+
+# - 4GB+ RAM (8GB+ recommended for deep learning)
+# - 2GB+ free disk space
+# - MongoDB 4.4+
+# - Internet connection for model downloads

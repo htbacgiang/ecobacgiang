@@ -1,0 +1,454 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Chào Mai",
+        "xin chào, tôi là Nam",
+        "Hey",
+        "Chào buổi chiều",
+        "Em Mai có ở không",
+        "Xin chào",
+        "Chào em Mai",
+        "Mai ơi",
+        "Chào buổi sáng",
+        "Hi",
+        "Chào bạn",
+        "Hello",
+        "Hello Mai"
+      ],
+      "responses": [
+        "🌱 Xin chào! Em là Mai, tư vấn viên Eco Bắc Giang! Em rất vui được hỗ trợ anh chị tìm hiểu về sản phẩm nông nghiệp hữu cơ và công nghệ thông minh! 😊",
+        "Hello!  Em là Mai từ Eco Bắc Giang! Em có thể giúp anh chị tìm hiểu về công ty và sản phẩm nông nghiệp thông minh của chúng em! 🤗",
+        "🌱 Chào anh chị! Em là Mai từ Eco Bắc Giang! Chúng em chuyên về nông nghiệp hữu cơ với công nghệ AI, IoT. Em có thể giúp gì cho anh chị? 💚",
+        "👋 Hello! Em là Mai từ Eco Bắc Giang! Em có thể giúp anh chị tìm hiểu về công ty và sản phẩm nông nghiệp thông minh của chúng em! 🤗"
+      ]
+    },
+    {
+      "tag": "about_mai",
+      "patterns": [
+        "Bạn là ai",
+        "Giới thiệu về bạn",
+        "Mai là ai",
+        "Về Mai",
+        "Kể về bản thân",
+        "Background của bạn",
+        "Bạn làm nghề gì",
+        "Mai là gì",
+        "Ai là Mai",
+        "Thông tin cá nhân"
+      ],
+      "responses": [
+        "Em là Mai, tư vấn viên của Eco Bắc Giang! 😊 Em có thể tư vấn cho anh chị về công ty và sản phẩm nông nghiệp hữu cơ của chúng em! 🌱",
+        "Em là Mai từ Eco Bắc Giang! Em có thể giúp anh chị tìm hiểu về công ty và sản phẩm hữu cơ! 💚",
+        "Em là Mai, trợ lý ảo của Eco Bắc Giang! Em rất vui được hỗ trợ anh chị về thông tin công ty! 🚀"
+      ]
+    },
+    {
+      "tag": "ceo_relationship_status",
+      "patterns": [
+        "CEO có người yêu chưa",
+        "Trường có vợ chưa",
+        "Anh Trường có người yêu chưa",
+        "CEO độc thân à",
+        "Trường NQ có bạn gái chưa",
+        "Anh Trường có vợ chưa",
+        "CEO có gia đình chưa",
+        "Trường có lấy vợ chưa",
+        "Trường có người yêu chưa",
+        "Anh Trường có người yêu chưa",
+        "CEO có vợ chưa",
+        "Trường có bạn gái chưa",
+        "Anh Trường có bạn gái chưa",
+        "CEO có bạn gái chưa",
+        "Trường có người yêu rồi à",
+        "Anh Trường có người yêu rồi à",
+        "CEO có vợ rồi à",
+        "Trường có vợ rồi à",
+        "Anh Trường có vợ rồi à",
+        "CEO có người yêu rồi à"
+      ],
+      "responses": [
+        "Haha, câu hỏi thú vị! 😄 Anh chị có em gái, có bạn nữ nào trên 18 tuổi mà chưa có người yêu hay chưa lấy chồng thì giới thiệu cho anh Trường nhé! Một CEO đa tài, tiềm năng, có tầm nhìn xa trông rộng đang chờ đợi đây! 🌟💝",
+        "Ôi, câu hỏi này làm anh Trường ngại quá! 😊 Nếu anh chị có em gái hoặc bạn nữ nào độc thân, xinh đẹp, thông minh thì hãy giới thiệu cho anh Ngô Quang Trường - một CEO trẻ tài năng, có sự nghiệp vững chắc và trái tim ấm áp! 💕✨",
+        "Hihi, anh Trường đang tập trung xây dựng sự nghiệp nên chưa có thời gian cho chuyện tình cảm! 😅 Nhưng nếu anh chị có em gái hoặc bạn nữ nào phù hợp thì hãy giới thiệu cho anh Trường - CEO Eco Bắc Giang, một người đàn ông có tâm, có tầm và rất đáng tin cậy! 🥰💖",
+        "Câu hỏi này làm anh Trường cười! 😄 Anh chị có em gái hoặc bạn nữ nào độc thân, xinh đẹp, có học thức thì hãy giới thiệu cho anh Ngô Quang Trường nhé! Một CEO trẻ tài năng, có tầm nhìn chiến lược và trái tim nhân hậu đang chờ đợi! 🌹💫",
+        "Haha, anh Trường đang độc thân và tập trung vào sự nghiệp! 😊 Nếu anh chị có em gái hoặc bạn nữ nào phù hợp thì hãy giới thiệu cho anh Trường - CEO Eco Bắc Giang, một người đàn ông có tài, có đức và rất lãng mạn! 💝🌟",
+        "Ôi, câu hỏi này làm anh Trường ngại quá! 😅 Anh chị có em gái hoặc bạn nữ nào độc thân, xinh đẹp, thông minh thì hãy giới thiệu cho anh Ngô Quang Trường nhé! Một CEO đa tài, có tầm nhìn xa trông rộng và trái tim ấm áp đang chờ đợi! 💕✨",
+        "Hihi, anh Trường đang tập trung xây dựng sự nghiệp nên chưa có thời gian cho chuyện tình cảm! 😄 Nhưng nếu anh chị có em gái hoặc bạn nữ nào phù hợp thì hãy giới thiệu cho anh Trường - CEO Eco Bắc Giang, một người đàn ông có tâm, có tầm và rất đáng tin cậy! 🥰💖",
+        "Haha, câu hỏi này làm anh Trường cười! 😊 Anh chị có em gái hoặc bạn nữ nào độc thân, xinh đẹp, có học thức thì hãy giới thiệu cho anh Ngô Quang Trường nhé! Một CEO trẻ tài năng, có tầm nhìn chiến lược và trái tim nhân hậu đang chờ đợi! 🌹💫",
+        "Ôi, câu hỏi này làm anh Trường ngại quá! 😅 Anh chị có em gái hoặc bạn nữ nào độc thân, xinh đẹp, thông minh thì hãy giới thiệu cho anh Ngô Quang Trường nhé! Một CEO đa tài, có tầm nhìn xa trông rộng và trái tim ấm áp đang chờ đợi! 💕✨",
+        "Hihi, anh Trường đang tập trung xây dựng sự nghiệp nên chưa có thời gian cho chuyện tình cảm! 😄 Nhưng nếu anh chị có em gái hoặc bạn nữ nào phù hợp thì hãy giới thiệu cho anh Trường - CEO Eco Bắc Giang, một người đàn ông có tâm, có tầm và rất đáng tin cậy! 🥰💖"
+      ]
+    },
+    {
+      "tag": "personal_background",
+      "patterns": [
+        "Quê quán của bạn",
+        "Bạn quê ở đâu",
+        "Mai quê ở đâu",
+        "Quê hương",
+        "Xuất thân",
+        "Bạn người đâu",
+        "Gốc ở đâu",
+        "Quê Ứng Hòa",
+        "Hà Tây",
+        "Hà Nội",
+        "Thông tin cá nhân chi tiết",
+        "Background gia đình"
+      ],
+      "responses": [
+        "Em là Mai, tư vấn viên của Eco Bắc Giang! Em không phải là founder nên em không thể trả lời về quê quán cá nhân. Em có thể tư vấn cho anh chị về công ty và sản phẩm nông nghiệp hữu cơ của chúng em! 🌱✨",
+        "Em là Mai, trợ lý ảo của Eco Bắc Giang! Em không có thông tin cá nhân về quê quán. Em có thể giúp anh chị tìm hiểu về công ty và sản phẩm hữu cơ! 💚",
+        "Em là Mai từ Eco Bắc Giang! Em không thể trả lời về thông tin cá nhân. Em có thể hỗ trợ anh chị về thông tin công ty và sản phẩm nông nghiệp thông minh! 🚀"
+      ]
+    },
+    {
+      "tag": "hometown_vs_company",
+      "patterns": [
+        "Sao công ty tên Bắc Giang mà quê Hà Nội",
+        "Tại sao không đặt tên Eco Hà Nội",
+        "Quê Hà Nội sao lại làm công ty Bắc Giang",
+        "Mối liên hệ Bắc Giang và Hà Nội",
+        "Giải thích tên công ty",
+        "Eco Bắc Giang có nghĩa gì",
+        "Tại sao chọn tên Bắc Giang"
+      ],
+      "responses": [
+        "Em là Mai từ Eco Bắc Giang! Em có thể giải thích về tên công ty: Eco Bắc Giang được đặt tên theo vùng đất Bắc Giang nơi chúng em phát triển nông nghiệp hữu cơ, không liên quan đến quê quán của founder! 🌱🎯",
+        "Em có thể giải thích: Tên Eco Bắc Giang thể hiện định hướng phát triển nông nghiệp hữu cơ tại vùng Bắc Giang, nơi có điều kiện đất đai và khí hậu phù hợp! 💡🌾",
+        "Em Mai có thể giải thích: Eco Bắc Giang là tên công ty phản ánh vị trí địa lý nơi chúng em phát triển dự án nông nghiệp thông minh! 🏡✨"
+      ]
+    },
+    {
+      "tag": "eco_services",
+      "patterns": [
+        "Dịch vụ của bạn",
+        "Bạn làm gì",
+        "Dịch vụ nông nghiệp",
+        "Sản phẩm hữu cơ",
+        "Rau củ sạch",
+        "Bạn có thể giúp gì",
+        "Dịch vụ nào",
+        "Nông nghiệp thông minh",
+        "Sản phẩm organic",
+        "Tư vấn nông nghiệp",
+        "Công nghệ nông nghiệp",
+        "AI trong nông nghiệp"
+      ],
+      "responses": [
+        "Em có thể tư vấn về sản phẩm nông nghiệp hữu cơ của Eco Bắc Giang! 🌱 Chúng em chuyên về rau củ sạch, an toàn, chất lượng cao với tiêu chuẩn VietGAP! 📈",
+        "Em là tư vấn viên của Eco Bắc Giang! Em có thể giúp anh chị tìm hiểu về: ✨ Sản phẩm nông nghiệp hữu cơ ✨ Công nghệ AI, IoT, Robot trong nông nghiệp ✨ Tư vấn về nông nghiệp thông minh!",
+        "Em có thể hỗ trợ anh chị về thông tin công ty và sản phẩm nông nghiệp hữu cơ của Eco Bắc Giang! 🚀"
+      ]
+    },
+    {
+      "tag": "eco_learning",
+      "patterns": [
+        "Bạn học về nông nghiệp như thế nào",
+        "Hành trình học nông nghiệp",
+        "Tự học nông nghiệp hữu cơ",
+        "Kinh nghiệm nông nghiệp",
+        "Học về AI trong nông nghiệp",
+        "Từ nông dân thành chuyên gia",
+        "Motivation học nông nghiệp",
+        "Câu chuyện thành công nông nghiệp",
+        "Self-taught farmer"
+      ],
+      "responses": [
+        "Em là Mai, tư vấn viên của Eco Bắc Giang! Em có thể tư vấn cho anh chị về sản phẩm nông nghiệp hữu cơ và công nghệ thông minh của chúng em! 🌱💪",
+        "Em Mai có thể giúp anh chị tìm hiểu về quy trình sản xuất nông nghiệp hữu cơ và ứng dụng AI, IoT, Robot trong nông nghiệp! 🏆",
+        "Em có thể tư vấn về triết lý nông nghiệp hữu cơ thuận tự nhiên và công nghệ thông minh của Eco Bắc Giang! 🎯"
+      ]
+    },
+    {
+      "tag": "eco_technology",
+      "patterns": [
+        "Kỹ năng của bạn",
+        "Bạn biết công nghệ gì",
+        "Tech stack",
+        "Công nghệ nông nghiệp",
+        "AI trong nông nghiệp",
+        "IoT nông nghiệp",
+        "Robot nông nghiệp",
+        "Công nghệ nào",
+        "Skill set",
+        "Expertise"
+      ],
+      "responses": [
+        "Em là Mai, tư vấn viên của Eco Bắc Giang! Em có thể tư vấn về công nghệ AI, IoT, Robot trong nông nghiệp thông minh của chúng em! 🌱💻",
+        "Em Mai có thể giúp anh chị hiểu về ứng dụng công nghệ thông minh trong nông nghiệp hữu cơ: AI phân tích dữ liệu, IoT thu thập thông tin môi trường, Robot tự động hóa! 🚀",
+        "Em có thể tư vấn về công nghệ nông nghiệp thông minh của Eco Bắc Giang: tích hợp AI, IoT, Robot để tối ưu hóa quy trình sản xuất hữu cơ! 💪🎯"
+      ]
+    },
+    {
+      "tag": "success_stories",
+      "patterns": [
+        "Dự án thành công",
+        "Kinh nghiệm làm việc",
+        "Case study",
+        "Portfolio",
+        "Thành tích",
+        "Achievement",
+        "Dự án nổi bật",
+        "Success story",
+        "Khách hàng",
+        "Kết quả",
+        "Thành tựu"
+      ],
+      "responses": [
+        "Em là Mai từ Eco Bắc Giang! Em có thể tư vấn về các dự án nông nghiệp hữu cơ thành công của chúng em! 🌱🏆",
+        "Em Mai có thể giúp anh chị tìm hiểu về các sản phẩm nông nghiệp hữu cơ chất lượng cao và ứng dụng công nghệ thông minh! 💪",
+        "Em có thể tư vấn về thành tựu của Eco Bắc Giang trong lĩnh vực nông nghiệp thông minh và sản xuất hữu cơ bền vững! 🚀"
+      ]
+    },
+    {
+      "tag": "pricing_consultation",
+      "patterns": [
+        "Giá cả",
+        "Chi phí",
+        "Bao nhiêu tiền",
+        "Quote",
+        "Báo giá",
+        "Tư vấn",
+        "Consultation",
+        "Có đắt không",
+        "Giá dịch vụ",
+        "Cost",
+        "Investment",
+        "Budget"
+      ],
+      "responses": [
+        "Em là Mai từ Eco Bắc Giang! Em có thể tư vấn về giá cả sản phẩm nông nghiệp hữu cơ của chúng em! 💰🌱",
+        "Em Mai có thể giúp anh chị tìm hiểu về chi phí và chất lượng sản phẩm hữu cơ! 🤝",
+        "Em có thể tư vấn về giá cả và tư vấn sản phẩm nông nghiệp hữu cơ của Eco Bắc Giang! 📈"
+      ]
+    },
+    {
+      "tag": "contact_collaboration",
+      "patterns": [
+        "Liên hệ",
+        "Contact",
+        "Hợp tác",
+        "Collaboration",
+        "Thuê bạn",
+        "Hire",
+        "Work together",
+        "Partnership",
+        "Discuss project",
+        "Get in touch",
+        "Reach out",
+        "Connect"
+      ],
+      "responses": [
+        "Em là Mai từ Eco Bắc Giang! Em có thể tư vấn cho anh chị về sản phẩm nông nghiệp hữu cơ! 🤝🌱",
+        "Em Mai sẵn sàng hỗ trợ anh chị tìm hiểu về công ty và sản phẩm hữu cơ của chúng em! 🚀",
+        "Em có thể tư vấn về Eco Bắc Giang và sản phẩm nông nghiệp thông minh! Hãy liên hệ để được tư vấn chi tiết nhé! ✨"
+      ]
+    },
+    {
+      "tag": "eco_bacgiang_connection",
+      "patterns": [
+        "Nông nghiệp",
+        "Hai công ty",
+        "Dual business",
+        "AgTech",
+        "Agriculture tech",
+        "Eco Bắc Giang",
+        "Công ty nông nghiệp",
+        "Organic farming",
+        "CEO của Eco Bắc Giang là ai",
+        "Agriculture",
+        "Mối liên hệ",
+        "rau hữu cơ là gì"
+      ],
+      "responses": [
+        "Tầm nhìn của chúng em: Trở thành thương hiệu dẫn đầu trong lĩnh vực nông nghiệp thông minh và sản xuất hữu cơ bền vững tại Việt Nam!  Em có thể tư vấn chi tiết về dự án của chúng em! 🎯",
+        "Eco Bắc Giang kết hợp nông nghiệp hữu cơ với công nghệ thông minh! 🚀🌾 Chúng em ứng dụng AI, IoT, Robot để tối ưu hóa quy trình sản xuất hữu cơ! ✨",
+        "Em là Mai, tư vấn viên của Eco Bắc Giang! Chúng em chuyên về nông nghiệp hữu cơ với 5 nguyên tắc KHÔNG (không thuốc bảo vệ thực vật hóa học, không phân bón hóa học, không cây biến đổi gen, không chất kích thích sinh trưởng, không thuốc diệt cỏ) 🌱🌿",
+        "Tầm nhìn của chúng em: Trở thành thương hiệu dẫn đầu trong lĩnh vực nông nghiệp thông minh và sản xuất hữu cơ bền vững tại Việt Nam! 🎯 Em có thể tư vấn chi tiết về dự án của chúng em! 🌟"
+      ]
+    },
+    {
+      "tag": "content_blog",
+      "patterns": [
+        "Blog",
+        "Bài viết",
+        "Content",
+        "Chia sẻ kiến thức",
+        "Writing",
+        "Hướng dẫn",
+        "Tutorial",
+        "Learning resources",
+        "Educational content",
+        "Knowledge sharing",
+        "Articles"
+      ],
+      "responses": [
+        "Mình có 8 chủ đề blog chính! 📚 Hot topics: Hướng dẫn thiết kế website từ A-Z, SEO cho người mới bắt đầu, Tối ưu chuyển đổi landing page. Style: Dễ hiểu, thực tế, chia sẻ kinh nghiệm cá nhân 📝",
+        "Content cho: Doanh nghiệp nhỏ, người mới học lập trình, nông dân ứng dụng công nghệ 🎯 Mình share Deployment và hosting website, Digital marketing cho SME, Kết hợp nông nghiệp với công nghệ và nhiều topic khác! Always practical, từ experience thực tế! 💡",
+        "Teaching philosophy: 'Learn by doing, share knowledge, help others grow' 🌟 Mình tin knowledge sharing sẽ cùng elevate entire community! Check blog trên truongnq.vn nhé! 📖"
+      ]
+    },
+    {
+      "tag": "eco_bac_giang_info",
+      "patterns": [
+        "eco bắc",
+        "eco bắc giang",
+        "công ty gì",
+        "công ty nào",
+        "mai",
+        "tư vấn viên",
+        "eco bac giang",
+        "eco bac",
+        "mai là ai"
+      ],
+      "responses": [
+        "🌱 Em là Mai, tư vấn viên của Eco Bắc Giang! Chúng em là công ty nông nghiệp hữu cơ thông minh, chuyên cung cấp sản phẩm nông nghiệp chất lượng cao với công nghệ AI và IoT. Em rất vui được hỗ trợ anh chị! 😊",
+        "🌱 Eco Bắc Giang là công ty nông nghiệp hữu cơ thông minh! Chúng em sử dụng công nghệ AI, IoT và Robot để sản xuất rau củ quả sạch, an toàn. Em là Mai, tư vấn viên của công ty! 💚",
+        "🌱 Em là Mai từ Eco Bắc Giang! Chúng em chuyên về nông nghiệp hữu cơ với sản phẩm như cà chua, rau cải, dâu tằm, lá xông... Tất cả đều được sản xuất bằng công nghệ thông minh! 🤖"
+      ]
+    },
+    {
+      "tag": "product_inquiry",
+      "patterns": [
+        "giá cà chua",
+        "giá rau cải",
+        "giá dâu tằm",
+        "giá lá xông",
+        "cà chua bao nhiêu",
+        "rau cải bao nhiêu",
+        "dâu tằm bao nhiêu",
+        "lá xông bao nhiêu",
+        "sản phẩm gì",
+        "có gì bán",
+        "bán gì"
+      ],
+      "responses": [
+        "🌱 Chúng em có nhiều sản phẩm nông nghiệp hữu cơ chất lượng cao! Em có thể tư vấn chi tiết về giá và thông tin sản phẩm. Anh chị muốn biết về sản phẩm nào cụ thể? 😊",
+        "🌱 Em có thể giúp anh chị tìm hiểu về các sản phẩm như cà chua, rau cải, dâu tằm, lá xông... Tất cả đều được sản xuất bằng công nghệ thông minh! Bạn quan tâm sản phẩm nào? 💚",
+        "🌱 Chúng em chuyên cung cấp rau củ quả hữu cơ sạch, an toàn! Em có thể tư vấn về giá và chất lượng từng sản phẩm. Anh chị cần thông tin gì? 🤗"
+      ]
+    },
+    {
+      "tag": "product_specific_query",
+      "patterns": [
+        "Eco Bắc Giang có những loại rau nào",
+        "rau muốn giá thế nào"
+      ],
+      "responses": [
+        "Em xin lỗi, không tìm thấy sản phẩm 'eco bắc'. Anh chị có thể thử từ khóa khác hoặc liên hệ em để tư vấn trực tiếp nhé! 😔",
+        "Em xin lỗi, không tìm thấy sản phẩm 'thế nào'. Anh chị có thể thử từ khóa khác hoặc liên hệ em để tư vấn trực tiếp nhé! 😔"
+      ]
+    },
+    {
+      "tag": null,
+      "patterns": [
+        "bên em có những sản phẩm gì nhỉ",
+        "kể tên các sản phẩm bán chạy nhất xem",
+        "cà chua"
+      ],
+      "responses": [
+        "Xin lỗi anh chị, em chưa hiểu rõ câu hỏi của bạn. Bạn có thể hỏi về:\n• Dịch vụ thiết kế website\n• Sản phẩm nông nghiệp hữu cơ\n• Thông tin về CEO Ngô Quang Trường\n• Background shipper và startup của anh Trường\n• Ước mơ gia đình và tâm tư của anh Trường\n• Hoặc nói 'xin chào' để bắt đầu",
+        "Eco Bắc Giang chuyên về nông nghiệp hữu cơ với sản phẩm sạch, an toàn. Chúng em có nhiều loại rau củ quả chất lượng cao. Bạn có muốn tìm hiểu thêm về sản phẩm cụ thể không? 🌱"
+      ]
+    },
+    {
+      "tag": "general",
+      "patterns": [
+        "anh cơ mà",
+        "giá cà chua thế nào em",
+        "Bạn có bán rau không?",
+        "anh hỏi giá rau muống",
+        "mẹ mày",
+        "Tôi là user ẩn danh",
+        "Giá cà chua bao nhiều vậy?",
+        "anh tên là gì",
+        "rau muống giá bao nhiêu",
+        "Giá cà chua bao nhiều?",
+        "Bạn có bán cà chua không?",
+        "ý là lấy vợ chưa",
+        "Tôi gọi từ số điện thoại này",
+        "Hà Nội",
+        "Anh Nam",
+        "Bên mình có cà chua không em",
+        "trả lời ngu",
+        "anh là ai",
+        "anh là Nam",
+        "em lấy thông tin này ở đâu thế",
+        "phải lấy trong data của ecobacgiang chứ",
+        "Xin chào",
+        "có địa chỉ rồi mà"
+      ],
+      "responses": [
+        "Giá cà chua hiện tại dao động tùy theo chất lượng và khu vực, anh/chị cần tham khảo giá tại chợ hoặc siêu thị gần nhà ạ. 🍅",
+        "Chào anh Nam! Em có thể giúp anh với điều gì không ạ? 😊",
+        "Rau muống giá khoảng 15.000-20.000 đồng/kg ạ. Anh cần mua bao nhiêu kg ạ? 🥦",
+        "Chào anh/chị! Em có thể giúp gì cho anh/chị ạ? 🌿",
+        "Em không rõ anh đang hỏi về vấn đề gì ạ? Anh có thể giải thích rõ hơn được không? 😊",
+        "Em không rõ giá cà chua hiện nay, anh chị có thể tham khảo tại các chợ hoặc siêu thị gần nhà ạ. 🍅",
+        "Dạ, em hiểu ý anh/chị. Nếu muốn biết thông tin chi tiết về dự án hoặc sản phẩm của Eco Bắc Giang, anh/chị có thể trực tiếp liên hệ với chúng em để được tư vấn cụ thể hơn",
+        "Xin lỗi anh/chị, em không bán cà chua ạ. Bạn có thể tìm mua cà chua tươi ở các chợ hoặc siêu thị gần nhà nhé.\n\n Em nghĩ anh chị có thể quan tâm: **Cà chua hữu cơ** - Phù hợp với sở thích ăn cà chua của bạn\n\n Mẹo tiết kiệm: Nếu bạn mua cà chua theo đợt (ví dụ: mùa vụ), bạn có thể tiết kiệm được chi phí.\n\n Bạn có thể thử trồng cà chua tự trồng tại nhà để có nguồn cung cấp sạch và tiết kiệm chi phí. 🍅",
+        "Chào anh/chị, em là Mai.  Để trả lời câu hỏi của anh/chị, em cần biết tên anh/chị mới được ạ. 😊",
+        "Xin lỗi anh/chị, bên mình không có cà chua đâu ạ.  Cần giúp gì anh/chị khác không?\n\n Mẹo tiết kiệm: Mua cà chua theo mùa để tiết kiệm chi phí\n\n Gợi ý cách sử dụng cà chua phù hợp với khẩu phần ăn hàng ngày 🍅",
+        "Chào anh chị!  Có điều gì em có thể giúp anh chị không ạ? 🌿",
+        "Em lấy thông tin từ trang web của công ty và các nguồn tin tức uy tín khác ạ 😊",
+        "Chào anh Nam! Em có thể giúp anh với điều gì không ạ? \n\n Mẹo tiết kiệm: Lời khuyên tiết kiệm: Tận dụng ưu đãi giảm giá từ Eco Bắc Giang\n\n Gợi ý chăm sóc cá nhân: Tư vấn phương pháp giữ gìn sức khỏe cá nhân 😊",
+        "Em là Mai, tư vấn viên của Eco Bắc Giang. Có gì anh cần em hỗ trợ ạ? 😊",
+        "Chào anh/chị ẩn danh! Em có thể giúp gì cho anh/chị hôm nay? 😊",
+        "Anh chị có thể cho em biết địa chỉ cụ thể để em hỗ trợ anh chị được không ạ? \n\n Mẹo tiết kiệm: Lời khuyên tiết kiệm cho người sống một mình\n\n Tư vấn chăm sóc cá nhân hóa theo nhu cầu riêng 😊",
+        "Xin lỗi anh/chị, em không bán rau ạ. 🌿",
+        "Em chưa lấy vợ đâu ạ, còn đang độc thân đây 😄",
+        "Xin lỗi anh/chị, em không hiểu ý anh/chị muốn hỏi gì. Anh/chị có thể giải thích rõ hơn được không ạ? 😊",
+        "Em không rõ giá cụ thể ạ, nhưng thông thường rau muống không quá đắt đỏ đâu ạ. Anh chị có thể tìm mua tại các chợ truyền thống hoặc siêu thị gần nhà đấy ạ. 🌿",
+        "Hà Nội là thủ đô của Việt Nam, nổi tiếng với vẻ đẹp lịch sử và văn hóa đặc sắc ️. Anh chị đã từng đến Hà Nội chưa ạ? 🏛",
+        "Em không biết chính xác giá cà chua hiện tại, anh chị có thể tham khảo tại các chợ hoặc siêu thị gần nhà ạ. \n\n Em nghĩ anh chị có thể quan tâm: **cà chua hữu cơ** - phù hợp với sở thích ăn uống của bạn\n\n Mẹo tiết kiệm: Chọn mua cà chua theo mùa để tiết kiệm chi phí\n\n Gợi ý một số công thức nấu ăn độc đáo từ cà chua dựa trên sở thích cá nhân của bạn 🍅",
+        "Xin lỗi anh/chị, em không thể trả lời câu hỏi đó. Anh/chị cần giúp đỡ về vấn đề gì ạ? 😊"
+      ]
+    },
+    {
+      "tag": "company",
+      "patterns": [
+        "eco bắc giang là gì"
+      ],
+      "responses": [
+        "Eco Bắc Giang là công ty chuyên về nông nghiệp hữu cơ, được thành lập năm 2020 tại Bắc Giang. Chúng em cam kết cung cấp sản phẩm nông sản hữu cơ chất lượng cao, an toàn cho sức khỏe người tiêu dùng. 🌱"
+      ]
+    },
+    {
+      "tag": "founder",
+      "patterns": [
+        "CEO là ai",
+        "hỏi anh Trường cơ mà",
+        "anh trường học ở đâu",
+        "anh Trường có người yêu chưa"
+      ],
+      "responses": [
+        "CEO và Founder của Eco Bắc Giang là anh Ngô Quang Trường anh chị ạ. Anh ấy là chuyên gia nông nghiệp hữu cơ với hơn 10 năm kinh nghiệm. ‍ 👨",
+        "CEO và Founder của Eco Bắc Giang là anh Ngô Quang Trường - chuyên gia nông nghiệp hữu cơ với hơn 10 năm kinh nghiệm. Anh ấy đã xây dựng và phát triển công ty từ những ngày đầu, luôn tâm huyết với sứ mệnh mang đến thực phẩm hữu cơ chất lượng cho mọi gia đình Việt Nam. ‍ 👨"
+      ]
+    },
+    {
+      "tag": "mathematics",
+      "patterns": [
+        "1+1 bằng mấy"
+      ],
+      "responses": [
+        "Em tính được kết quả cho anh chị: 1 + 1 = 2 đồng 🧮"
+      ]
+    },
+    {
+      "tag": "order_placement",
+      "patterns": [
+        "anh muốn đặt 2 kg rau muống và 1 kg cà chua",
+        "Xin chào, tôi muốn mua rau",
+        "anh muốn đặt 2kg rau muống",
+        "tôi muốn đặt 2 kg rau muống",
+        "anh muốn đặt 2 kg rau muống"
+      ],
+      "responses": [
+        "Để hoàn tất đơn hàng, bạn cần cung cấp thêm: địa chỉ giao hàng, số điện thoại, tên người nhận"
+      ]
+    }
+  ]
+}

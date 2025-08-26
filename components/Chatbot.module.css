@@ -1,0 +1,655 @@
+/* Chatbot Container - Fixed position at bottom right */
+.chatbotContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Tăng z-index để đảm bảo luôn hiển thị trên cùng */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+/* Toggle Button - Dễ thương với gradient xanh lá */
+.toggleButton {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+  color: white;
+  border: 3px solid white;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4), 0 0 0 0 rgba(74, 222, 128, 0.7);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.toggleButton:hover {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 12px 35px rgba(74, 222, 128, 0.6), 0 0 0 10px rgba(74, 222, 128, 0.1);
+}
+
+.toggleButton.open {
+  background: linear-gradient(135deg, #84cc16 0%, #65a30d 50%, #4d7c0f 100%);
+  animation: spin 0.5s ease-in-out;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+.toggleButton.open:hover {
+  background: linear-gradient(135deg, #65a30d 0%, #4d7c0f 50%, #365314 100%);
+  transform: scale(1.1) translateY(-2px);
+}
+
+/* Chatbot Window - Cửa sổ dễ thương với hiệu ứng mềm mại */
+.chatbotWindow {
+  position: absolute;
+  bottom: 85px;
+  right: 0;
+  width: 350px;
+  height: 480px;
+  max-width: 90vw; /* Giới hạn chiều rộng tối đa trên mobile */
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 25px;
+  box-shadow: 
+    0 20px 60px rgba(74, 222, 128, 0.15),
+    0 8px 25px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px) scale(0.9) rotateX(10deg);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 2px solid rgba(74, 222, 128, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.chatbotWindow.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1) rotateX(0deg);
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(30px) scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-5px) scale(1.02);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Header - Gradient xanh lá dễ thương */
+.header {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+  color: white;
+  padding: 18px 22px;
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.headerTitle {
+  font-weight: 700;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #00ff88 0%, #00cc66 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+.closeButton {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Messages Area - Khu vực tin nhắn xanh lá dễ thương */
+.chatbox {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: linear-gradient(180deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+  position: relative;
+}
+
+.chatbox::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatbox::-webkit-scrollbar-track {
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 10px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.chatbox::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* Message Containers */
+.messageContainer {
+  display: flex;
+  margin-bottom: 6px;
+  padding: 0 2px;
+}
+
+.userMessageContainer {
+  justify-content: flex-end;
+}
+
+.botMessageContainer {
+  justify-content: flex-start;
+}
+
+/* Messages - Bubble chat dễ thương và mềm mại */
+.message {
+  max-width: 90%;
+  padding: 12px 16px;
+  border-radius: 20px;
+  position: relative;
+  animation: messageSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.userMessage {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  color: white;
+  border-bottom-right-radius: 8px;
+  margin-left: auto;
+  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.userMessage::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #4ade80, #22c55e, #4ade80);
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.userMessage:hover::before {
+  opacity: 0.3;
+}
+
+.botMessage {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  color: #2d3748;
+  border: 2px solid rgba(74, 222, 128, 0.2);
+  border-bottom-left-radius: 8px;
+  margin-right: auto;
+  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.botMessage::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #4ade80, #22c55e, #4ade80);
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.botMessage:hover::before {
+  opacity: 0.1;
+}
+
+.errorMessage {
+  background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+  border: 2px solid #fc8181;
+  color: #c53030;
+  box-shadow: 0 6px 20px rgba(252, 129, 129, 0.25);
+}
+
+.messageText {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-align: justify;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.messageTime {
+  font-size: 10px;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  justify-content: flex-start;
+}
+
+.userMessage .messageTime {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.source {
+  font-size: 9px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Loading Message - Hiệu ứng loading xanh lá dễ thương */
+.loadingMessage {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid rgba(74, 222, 128, 0.2);
+  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.15);
+}
+
+.loadingDots {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+  justify-content: center;
+}
+
+.loadingDots span {
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  border-radius: 50%;
+  animation: loadingBounce 1.4s infinite both;
+  box-shadow: 0 1px 6px rgba(74, 222, 128, 0.3);
+}
+
+.loadingDots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loadingDots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.loadingDots span:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes loadingBounce {
+  0%, 80%, 100% {
+    transform: scale(0.8) translateY(0);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scale(1.2) translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* Input Area - Khu vực nhập tin dễ thương */
+.inputArea {
+  padding: 16px;
+  border-top: 2px solid rgba(74, 222, 128, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 0 0 25px 25px;
+  position: relative;
+}
+
+.inputArea::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  border-radius: 0 0 10px 10px;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.messageInput {
+  flex: 1;
+  min-height: 20px;
+  max-height: 80px;
+  padding: 12px 16px;
+  border: 2px solid rgba(74, 222, 128, 0.2);
+  border-radius: 20px;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.4;
+  font-family: inherit;
+  background: linear-gradient(135deg, #ffffff 0%, #fefcff 100%);
+  font-weight: 500;
+}
+
+.messageInput::placeholder {
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+.messageInput:focus {
+  border-color: #4ade80;
+  box-shadow: 
+    0 0 0 4px rgba(74, 222, 128, 0.1),
+    0 8px 25px rgba(74, 222, 128, 0.15);
+  transform: translateY(-2px);
+}
+
+.messageInput:disabled {
+  background: linear-gradient(135deg, #f9fafb 0%, #f1f5f9 100%);
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.sendButton {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(74, 222, 128, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.sendButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sendButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 12px 35px rgba(74, 222, 128, 0.4);
+}
+
+.sendButton:hover:not(:disabled)::before {
+  width: 100px;
+  height: 100px;
+}
+
+.sendButton:active:not(:disabled) {
+  transform: scale(1.05) translateY(0px);
+}
+
+.sendButton:disabled {
+  background: linear-gradient(135deg, #d1d5db 0%, #9ca3af 100%);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(156, 163, 175, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .chatbotContainer {
+    bottom: 80px; /* Tăng khoảng cách để tránh thanh navigation mobile */
+    right: 16px;
+  }
+
+  .toggleButton {
+    width: 58px;
+    height: 58px;
+    font-size: 24px;
+    box-shadow: 0 6px 20px rgba(74, 222, 128, 0.4), 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+
+  .chatbotWindow {
+    width: calc(100vw - 24px);
+    height: calc(100vh - 160px); /* Giảm chiều cao để phù hợp với vị trí mới */
+    bottom: 75px;
+    right: -8px; /* Căn chỉnh lại vị trí */
+    border-radius: 16px;
+    max-height: 500px; /* Giới hạn chiều cao tối đa */
+  }
+
+  .header {
+    padding: 12px 14px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .headerTitle {
+    font-size: 14px;
+  }
+
+  .chatbox {
+    padding: 10px 6px;
+    gap: 6px;
+  }
+
+  .inputArea {
+    padding: 10px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .messageInput {
+    padding: 10px 12px;
+    font-size: 16px; /* Prevent zoom on iOS */
+    min-height: 18px;
+    border-radius: 16px;
+  }
+
+  .sendButton {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .message {
+    max-width: 88%;
+    padding: 10px 12px;
+    border-radius: 16px;
+  }
+
+  .messageText {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 3px;
+  }
+
+  .messageTime {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbotContainer {
+    bottom: 90px; /* Tăng thêm khoảng cách cho màn hình nhỏ */
+    right: 12px;
+  }
+
+  .toggleButton {
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
+  }
+
+  .chatbotWindow {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 170px);
+    bottom: 70px;
+    right: -4px;
+    border-radius: 14px;
+    max-height: 480px;
+  }
+
+  .header {
+    padding: 10px 12px;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .headerTitle {
+    font-size: 13px;
+  }
+
+  .chatbox {
+    padding: 8px 4px;
+  }
+
+  .inputArea {
+    padding: 8px;
+    border-radius: 0 0 14px 14px;
+  }
+
+  .messageInput {
+    padding: 8px 10px;
+    min-height: 16px;
+    border-radius: 14px;
+  }
+
+  .sendButton {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .message {
+    padding: 8px 10px;
+    border-radius: 14px;
+  }
+
+  .messageText {
+    font-size: 12px;
+  }
+}

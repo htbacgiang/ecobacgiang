@@ -1,0 +1,178 @@
+/* VideoHero Component Styles */
+.videoHeroSection {
+  position: relative;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.videoHeroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/bg-image.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.videoContainer {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.videoElement {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.controlsOverlay {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.controlButton {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.controlButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.controlButton:focus {
+  outline: 2px solid rgba(34, 197, 94, 0.5);
+  outline-offset: 2px;
+}
+
+.contentSection {
+  position: relative;
+  z-index: 2;
+}
+
+.brandText {
+  color: #86efac;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.heading {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.description {
+  color: #f3f4f6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+}
+
+.featuresText {
+  color: #e5e7eb;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.featuresHighlight {
+  color: #86efac;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .videoHeroSection {
+    min-height: 300px;
+  }
+  
+  .controlsOverlay {
+    bottom: 12px;
+    right: 12px;
+  }
+  
+  .controlButton {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .videoHeroSection {
+    min-height: 250px;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 0.875rem;
+  }
+}
+
+/* Animation for content fade-in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contentSection > * {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.contentSection > *:nth-child(1) { animation-delay: 0.1s; }
+.contentSection > *:nth-child(2) { animation-delay: 0.2s; }
+.contentSection > *:nth-child(3) { animation-delay: 0.3s; }
+.contentSection > *:nth-child(4) { animation-delay: 0.4s; }
+
+/* Loading state for video */
+.videoLoading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

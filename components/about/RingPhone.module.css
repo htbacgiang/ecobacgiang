@@ -1,0 +1,141 @@
+/* HelpComponent.module.css */
+
+/* Retain original positioning for the container */
+.helpContainer {
+  position: fixed;
+  bottom: 120px;
+  left: 1px;
+  align-items: center;
+  z-index: 999;
+  pointer-events: none; /* Prevent clicks on the container itself */
+}
+
+/* Adjust positioning to stack buttons vertically without overlap */
+.phoneRing {
+  position: relative;
+  width: 120px;
+  height: 120px; /* Explicit height to match width and contain the button */
+  cursor: pointer;
+  margin-bottom: 20px; /* Add spacing between buttons */
+  top: 50px;
+  pointer-events: auto; /* Allow clicks on the phoneRing button */
+}
+
+.zaloRing {
+  position: relative;
+  width: 120px;
+  height: 70px; /* Retain original height */
+  cursor: pointer;
+  pointer-events: auto; /* Allow clicks on the zaloRing button */
+}
+
+/* Retain original circle sizes */
+.phoneRingCircleFill {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  border-radius: 100%;
+  animation: phoneRingCircleFillAnim 2.3s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.zaloRingCircleFill {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  border-radius: 100%;
+  animation: phoneRingCircleFillAnim 2.3s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.phoneRingCircle {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  border-radius: 100%;
+  animation: phoneRingCircleAnim 2.3s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.zaloRingCircle {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  border-radius: 100%;
+  animation: phoneRingCircleAnim 2.3s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+/* Ensure buttons inside phoneRing and zaloRing are clickable */
+.phoneRing button,
+.zaloRing button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* Center the circles relative to the buttons */
+.phoneRingCircle,
+.zaloRingCircle,
+.phoneRingCircleFill,
+.zaloRingCircleFill {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Retain original animations */
+@keyframes phoneRingCircleAnim {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.1;
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.1;
+  }
+}
+
+@keyframes phoneRingCircleFillAnim {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .helpContainer {
+    right: -20px;
+  }
+}
+
+/* Add focus styles for accessibility */
+.phoneRing button:focus,
+.zaloRing button:focus {
+  outline: 2px solid #0070ff;
+  outline-offset: 2px;
+}
+
+/* Optional: Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .phoneRingCircle,
+  .zaloRingCircle,
+  .phoneRingCircleFill,
+  .zaloRingCircleFill {
+    animation: none;
+  }
+}
